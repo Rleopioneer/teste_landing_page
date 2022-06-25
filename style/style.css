@@ -8,30 +8,30 @@ body {
   font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
 }
-body .header {
-  padding-top: 2.5em;
+
+.header {
   width: 100%;
   height: 25em;
   background-color: #707070;
   color: #fff;
-  -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 65%);
-          clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 65%);
+  -webkit-clip-path: polygon(0% 0, 100% 0, 100% 95%, 0% 62%);
+          clip-path: polygon(0% 0, 100% 0, 100% 95%, 0% 62%);
   text-align: center;
 }
-body .header .navbar {
+.header .navbar {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-body .header .navbar .navlist {
+.header .navbar .navlist {
   display: flex;
   flex-flow: wrap row;
   justify-content: center;
   align-items: center;
   list-style: none;
 }
-body .header .navbar .navlist .navButtons {
+.header .navbar .navlist .navButtons {
   margin: 0 24px;
   padding: 10px 14px;
   background-color: #fff;
@@ -39,22 +39,90 @@ body .header .navbar .navlist .navButtons {
   border-radius: 5px;
   box-shadow: 0 0 0 1px #fff;
 }
-body .header .navbar .navlist .navButtons:hover {
+.header .navbar .navlist .navButtons:hover {
   box-shadow: none;
-}
-body .header .navbar .navlist .navButtons a {
-  text-decoration: none;
   cursor: pointer;
+}
+.header .navbar .navlist .navButtons:hover a {
+  color: aqua;
+}
+.header .navbar .navlist .navButtons a {
+  text-decoration: none;
   color: #888888;
 }
-body .header p {
+.header p {
+  padding-top: 1em;
   font-size: 20px;
 }
-body .header h1 {
+.header h1 {
   font-size: 40px;
   margin-bottom: 20px;
 }
-body .header .slogan {
+.header .slogan {
   font-size: 14px;
   margin-bottom: 40px;
+}
+
+.algorithmHelp {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1em auto;
+}
+.algorithmHelp .help {
+  width: 50vw;
+  height: 13em;
+  padding-right: 3.5em;
+  margin-top: 22px;
+}
+.algorithmHelp .help h2 {
+  font-size: 20px;
+  color: #888888;
+  margin-bottom: 1.5em;
+}
+.algorithmHelp .help p {
+  font-size: 12px;
+  color: #888888;
+  margin-bottom: 1.5em;
+  line-height: 20px;
+}
+.algorithmHelp .form1 {
+  width: 30vw;
+  /* height: 22em; */
+}
+.algorithmHelp .form1 div {
+  display: flex;
+  flex-direction: row;
+  margin: 1.5em 0;
+}
+.algorithmHelp .form1 div label {
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  font-size: 12px;
+  color: #888888;
+}
+.algorithmHelp .form1 div label input {
+  height: 30px;
+  border: solid 1px #707070;
+  margin-top: 7px;
+}
+.algorithmHelp .form1 .selection {
+  display: flex;
+  flex-direction: row;
+}
+.algorithmHelp .form1 .selection input {
+  width: 14px;
+  margin-right: 5px;
+}
+.algorithmHelp .form1 button {
+  width: 340px;
+  height: 39px;
+  cursor: pointer;
+  background-color: #fff;
+  border: solid 1px #707070;
+}
+.algorithmHelp .form1 button:hover {
+  background-color: #707070;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
