@@ -18,6 +18,10 @@ body {
           clip-path: polygon(0% 0, 100% 0, 100% 95%, 0% 62%);
   text-align: center;
 }
+.header .content {
+  display: flex;
+  flex-flow: wrap column;
+}
 .header .navbar {
   display: flex;
   flex-direction: row;
@@ -26,7 +30,6 @@ body {
 }
 .header .navbar .navlist {
   display: flex;
-  flex-flow: wrap row;
   justify-content: center;
   align-items: center;
   list-style: none;
@@ -44,7 +47,7 @@ body {
   cursor: pointer;
 }
 .header .navbar .navlist .navButtons:hover a {
-  color: aqua;
+  border-bottom: 1px solid #888888;
 }
 .header .navbar .navlist .navButtons a {
   text-decoration: none;
@@ -124,5 +127,22 @@ body {
 }
 .algorithmHelp .form1 button:hover {
   background-color: #707070;
+  color: #fff;
+}
+
+.footer {
+  width: 100%;
+  height: 20em;
+  background-color: #707070;
+  -webkit-clip-path: polygon(0% 10%, 100% 40%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 10%, 100% 40%, 100% 100%, 0% 100%);
+  text-align: center;
+  position: absolute;
+}
+.footer .footerText {
+  position: relative;
+  bottom: -60%;
+  left: -50%;
+  transform: translate(50%, 40%);
   color: #fff;
 }/*# sourceMappingURL=style.css.map */
