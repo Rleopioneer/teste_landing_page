@@ -99,7 +99,7 @@ body {
     
 
     .help {
-        width: 45vw;
+        width: 40vw;
         height: 13em;
         padding-right: 3.5em;
         margin-top: 22px;
@@ -120,7 +120,8 @@ body {
     }
 
     .form1 {
-        width: 30vw;
+        
+        width: 35vw;
         /* height: 22em; */
 
         div {
@@ -174,97 +175,122 @@ body {
 }
 
 .specialSelection {
-    margin-top: 10em;
+    position: relative;
+    
+    .container {
+        margin-top: 10em;
 
-    .special {
-        text-align: center;
-        margin-bottom: 6vh;
-
-        h3 {
-            font-size: 18px;
-            color: $secondary-color;
-            
-
-            &:before, &:after {
-                content: ' ';
-                position: absolute;
-                width: 25%;
-                border-top: 1px solid $secondary-color;
-                margin-top: 1vh;
-            }
-
-            &:before {
-                margin-left: -355px;
-            }
-
-            &:after {
-                margin-left: 15px;
-            }
-            
-        }
-
-    }
-
-    .boxes {
-        display: flex;
-        flex-flow: column wrap;
-        width: 20vw;
-        height: 100vh;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-between;
-        align-content: space-between;
-
-        .box {
-            display: flex;
-            padding: 10px 0;
-            margin: 30px;
-            flex-flow: column wrap;
-            align-content: flex-start;
-            justify-content: center;
-            color: $secondary-color;
-            text-align: left; 
-
-            img {
-                width: 150px;
-            }
-
-            h4 {
-                margin: 0.5em 0;
-                font-size: 14px;
-                font-weight: 100;
+        .special {
+            text-align: center;
+            margin-bottom: 6vh;
+    
+            h3 {
+                font-size: 18px;
+                color: $secondary-color;
+                
+    
+                &:before, &:after {
+                    content: ' ';
+                    position: absolute;
+                    width: 25%;
+                    border-top: 1px solid $secondary-color;
+                    margin-top: 1vh;
+                }
+    
+                &:before {
+                    margin-left: -355px;
+                }
+    
+                &:after {
+                    margin-left: 15px;
+                }
                 
             }
-
-            p {
-                font-size: 12px;
-                margin-top: 0.5em;
-
-                &:nth-child(4) {
-                    font-size: 16px;
-                    font-weight: bold;
-                    margin-top: 1em;
-                }
-            }
-               
-            button {
-                margin-top: 1em;
-                width: 12em;
-                height: 4vh;
+    
+        }
+    
+        .boxes {
+            display: flex;
+            flex-flow: column wrap;
+            width: 20vw;
+            height: 100vh;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            align-content: space-between;
+    
+            .box {
+                display: flex;
+                padding: 10px 0;
+                margin: 30px;
+                flex-flow: column wrap;
+                align-content: flex-start;
+                justify-content: center;
                 color: $secondary-color;
-                font-size: 16px;
-                cursor: pointer;
-                background-color: #fff;
-                border: solid 1px $primary-color;
-        
-                &:hover {
-                    background-color: $primary-color;
-                    color: #fff;
+                text-align: left; 
+    
+                img {
+                    width: 150px;
                 }
+    
+                h4 {
+                    margin: 0.5em 0;
+                    font-size: 14px;
+                    font-weight: 100;
+                    
+                }
+    
+                p {
+                    font-size: 12px;
+                    margin-top: 0.5em;
+    
+                    &:nth-child(4) {
+                        font-size: 16px;
+                        font-weight: bold;
+                        margin-top: 1em;
+                    }
+                }
+                   
+                button {
+                    margin-top: 1em;
+                    width: 12em;
+                    height: 4vh;
+                    color: $secondary-color;
+                    font-size: 16px;
+                    cursor: pointer;
+                    background-color: #fff;
+                    border: solid 1px $primary-color;
             
+                    &:hover {
+                        background-color: $primary-color;
+                        color: #fff;
+                    }
+                
+                }
             }
+    
+    
         }
 
+        #btnNewPage {
+            position: absolute;
+            transform: translate(-50%, 95%);
+            bottom: -5%;
+            left: 50%;
+            width: 20vw;
+            height: 7vh;
+            color: $secondary-color;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #fff;
+            border: solid 1px $primary-color;
+    
+            &:hover {
+                background-color: $primary-color;
+                color: #fff;
+            }
+    
+        }
     }
 
 }

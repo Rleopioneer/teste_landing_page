@@ -75,7 +75,7 @@ body .container {
   margin: 2em auto;
 }
 .algorithmHelp .help {
-  width: 45vw;
+  width: 40vw;
   height: 13em;
   padding-right: 3.5em;
   margin-top: 22px;
@@ -92,7 +92,7 @@ body .container {
   line-height: 20px;
 }
 .algorithmHelp .form1 {
-  width: 30vw;
+  width: 35vw;
   /* height: 22em; */
 }
 .algorithmHelp .form1 div {
@@ -136,30 +136,33 @@ body .container {
 }
 
 .specialSelection {
+  position: relative;
+}
+.specialSelection .container {
   margin-top: 10em;
 }
-.specialSelection .special {
+.specialSelection .container .special {
   text-align: center;
   margin-bottom: 6vh;
 }
-.specialSelection .special h3 {
+.specialSelection .container .special h3 {
   font-size: 18px;
   color: #888888;
 }
-.specialSelection .special h3:before, .specialSelection .special h3:after {
+.specialSelection .container .special h3:before, .specialSelection .container .special h3:after {
   content: " ";
   position: absolute;
   width: 25%;
   border-top: 1px solid #888888;
   margin-top: 1vh;
 }
-.specialSelection .special h3:before {
+.specialSelection .container .special h3:before {
   margin-left: -355px;
 }
-.specialSelection .special h3:after {
+.specialSelection .container .special h3:after {
   margin-left: 15px;
 }
-.specialSelection .boxes {
+.specialSelection .container .boxes {
   display: flex;
   flex-flow: column wrap;
   width: 20vw;
@@ -169,7 +172,7 @@ body .container {
   justify-content: space-between;
   align-content: space-between;
 }
-.specialSelection .boxes .box {
+.specialSelection .container .boxes .box {
   display: flex;
   padding: 10px 0;
   margin: 30px;
@@ -179,24 +182,24 @@ body .container {
   color: #888888;
   text-align: left;
 }
-.specialSelection .boxes .box img {
+.specialSelection .container .boxes .box img {
   width: 150px;
 }
-.specialSelection .boxes .box h4 {
+.specialSelection .container .boxes .box h4 {
   margin: 0.5em 0;
   font-size: 14px;
   font-weight: 100;
 }
-.specialSelection .boxes .box p {
+.specialSelection .container .boxes .box p {
   font-size: 12px;
   margin-top: 0.5em;
 }
-.specialSelection .boxes .box p:nth-child(4) {
+.specialSelection .container .boxes .box p:nth-child(4) {
   font-size: 16px;
   font-weight: bold;
   margin-top: 1em;
 }
-.specialSelection .boxes .box button {
+.specialSelection .container .boxes .box button {
   margin-top: 1em;
   width: 12em;
   height: 4vh;
@@ -206,7 +209,24 @@ body .container {
   background-color: #fff;
   border: solid 1px #707070;
 }
-.specialSelection .boxes .box button:hover {
+.specialSelection .container .boxes .box button:hover {
+  background-color: #707070;
+  color: #fff;
+}
+.specialSelection .container #btnNewPage {
+  position: absolute;
+  transform: translate(-50%, 95%);
+  bottom: -5%;
+  left: 50%;
+  width: 20vw;
+  height: 7vh;
+  color: #888888;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fff;
+  border: solid 1px #707070;
+}
+.specialSelection .container #btnNewPage:hover {
   background-color: #707070;
   color: #fff;
 }
