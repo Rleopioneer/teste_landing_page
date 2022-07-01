@@ -8,35 +8,49 @@ body {
   font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
 }
+body .container {
+  width: 1100px;
+  margin: 0 auto;
+}
 
 .header {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  height: 25em;
+  height: 30em;
   background-color: #707070;
   color: #fff;
-  -webkit-clip-path: polygon(0% 0, 100% 0, 100% 95%, 0% 62%);
-          clip-path: polygon(0% 0, 100% 0, 100% 95%, 0% 62%);
+  -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 65%);
+          clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 65%);
   text-align: center;
 }
-.header .content {
-  display: flex;
-  flex-flow: wrap column;
+.header p {
+  padding: 1em;
+  font-size: 20px;
+}
+.header h1 {
+  font-size: 40px;
+}
+.header .slogan {
+  font-size: 14px;
+  padding: 5vh;
 }
 .header .navbar {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 }
 .header .navbar .navlist {
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   list-style: none;
 }
 .header .navbar .navlist .navButtons {
   margin: 0 24px;
-  padding: 10px 14px;
+  padding: 2.5vh 1.5vw;
   background-color: #fff;
   text-align: center;
   border-radius: 5px;
@@ -53,24 +67,12 @@ body {
   text-decoration: none;
   color: #888888;
 }
-.header p {
-  padding-top: 1em;
-  font-size: 20px;
-}
-.header h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-.header .slogan {
-  font-size: 14px;
-  margin-bottom: 40px;
-}
 
-.algorithmHelp {
+.algorithmHelp .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 1em auto;
+  margin: 2em auto;
 }
 .algorithmHelp .help {
   width: 45vw;
@@ -134,8 +136,7 @@ body {
 }
 
 .specialSelection {
-  height: 100vh;
-  margin: 2em auto;
+  margin-top: 10em;
 }
 .specialSelection .special {
   text-align: center;
@@ -160,9 +161,13 @@ body {
 }
 .specialSelection .boxes {
   display: flex;
-  justify-content: center;
-  padding: 15px 150px;
-  flex-wrap: row wrap;
+  flex-flow: column wrap;
+  width: 20vw;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
 }
 .specialSelection .boxes .box {
   display: flex;
@@ -211,7 +216,7 @@ body {
   justify-content: center;
   flex-flow: wrap column;
   align-items: center;
-  margin: 25vh auto 10vh auto;
+  margin-top: 25vh;
 }
 .news .share {
   text-align: center;
@@ -267,7 +272,7 @@ body {
   width: 25vw;
   height: 4.5vh;
   border: solid 1px #707070;
-  margin-top: 7px;
+  margin-top: 2vh;
 }
 .news #formShare button {
   width: 20vw;
@@ -287,6 +292,7 @@ body {
   width: 100%;
   height: 20em;
   background-color: #707070;
+  margin-top: 10em;
   -webkit-clip-path: polygon(0% 10%, 100% 40%, 100% 100%, 0% 100%);
           clip-path: polygon(0% 10%, 100% 40%, 100% 100%, 0% 100%);
   text-align: center;
