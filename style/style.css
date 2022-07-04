@@ -118,7 +118,7 @@ body .container {
   display: flex;
   flex-direction: row;
 }
-.algorithmHelp .form1 .selection #fem {
+.algorithmHelp .form1 .selection .fem {
   margin-left: 1vw;
 }
 .algorithmHelp .form1 .selection input {
