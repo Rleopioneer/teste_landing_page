@@ -19,8 +19,6 @@ body {
 }
 
 .header {
-    display: flex;
-    flex-wrap: wrap;
     width: 100%;
     height: 30em;
     background-color: $primary-color;
@@ -50,19 +48,28 @@ body {
 
         .navlist {
             display: flex;
-            flex-flow: row wrap;
+            list-style: none;
+            flex-direction: row;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
+
+            /* Media Query (Mobile)
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 20px 10px;
             list-style: none;
-            
+            justify-content: center;
+             */
 
             .navButtons {
-                margin: 0 24px;
-                padding: 2.5vh 1.5vw;
-                background-color: #fff; 
+                margin: 0px 30px;
+                padding: 2.5vh 1vw;
+                background-color: #fff;
                 text-align: center;
                 border-radius: 5px;
-                box-shadow: 0 0 0 1px #fff;
+                width: 11vw;
+                height: 7vh;
                 
                 &:hover {
                     box-shadow: none;
@@ -90,9 +97,8 @@ body {
 
     .container {
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
-        margin: 2em auto;
+        justify-content: center;
 
     }
     
@@ -120,9 +126,6 @@ body {
     }
 
     .form1 {
-        
-        width: 35vw;
-        /* height: 22em; */
 
         div {
             display: flex;
@@ -182,7 +185,6 @@ body {
 
         .special {
             text-align: center;
-            margin-bottom: 6vh;
     
             h3 {
                 font-size: 18px;
@@ -211,23 +213,21 @@ body {
     
         .boxes {
             display: flex;
+            width: 19vw;
+            height: 150vh;
             flex-flow: column wrap;
-            width: 20vw;
-            height: 100vh;
-            align-items: center;
             flex-direction: column;
-            justify-content: space-between;
-            align-content: space-between;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
     
             .box {
                 display: flex;
-                padding: 10px 0;
-                margin: 30px;
-                flex-flow: column wrap;
-                align-content: flex-start;
+                padding: 40px 40px;
+                flex-direction: column;
+                align-content: center;
                 justify-content: center;
                 color: $secondary-color;
-                text-align: left; 
+                
     
                 img {
                     width: 150px;
@@ -274,8 +274,8 @@ body {
 
         #btnNewPage {
             position: absolute;
-            transform: translate(-50%, 95%);
-            bottom: -5%;
+            transform: translate(-50%, 100%);
+            bottom: 0%;
             left: 50%;
             width: 20vw;
             height: 7vh;
@@ -296,11 +296,9 @@ body {
 }
 
 .news {
-    display: flex;
-    justify-content: center;
-    flex-flow: wrap column;
-    align-items: center;
+    text-align: center;
     margin-top: 25vh;
+    
 
     .share {
             text-align: center;
@@ -341,13 +339,14 @@ body {
         line-height: 20px;
     }
 
-    #formShare {
+    .form2 {
 
         display: flex;
         flex-flow: column wrap;
         align-items: center;
+        position: relative;
 
-        .form2 {
+        #formShare {
             display: flex;
             margin-bottom: 5vh;
             width: 70vw;
@@ -384,6 +383,10 @@ body {
             cursor: pointer;
             background-color: #fff;
             border: solid 1px $primary-color;
+            position: absolute;
+            transform: translate(-50%, 100%);
+            bottom: 0%;
+            left: 50%;
     
             &:hover {
                 background-color: $primary-color;

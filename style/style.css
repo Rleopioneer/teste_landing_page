@@ -14,8 +14,6 @@ body .container {
 }
 
 .header {
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
   height: 30em;
   background-color: #707070;
@@ -43,18 +41,27 @@ body .container {
 }
 .header .navbar .navlist {
   display: flex;
-  flex-flow: row wrap;
+  list-style: none;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  /* Media Query (Mobile)
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px 10px;
   list-style: none;
+  justify-content: center;
+   */
 }
 .header .navbar .navlist .navButtons {
-  margin: 0 24px;
-  padding: 2.5vh 1.5vw;
+  margin: 0px 30px;
+  padding: 2.5vh 1vw;
   background-color: #fff;
   text-align: center;
   border-radius: 5px;
-  box-shadow: 0 0 0 1px #fff;
+  width: 11vw;
+  height: 7vh;
 }
 .header .navbar .navlist .navButtons:hover {
   box-shadow: none;
@@ -70,9 +77,8 @@ body .container {
 
 .algorithmHelp .container {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  margin: 2em auto;
+  justify-content: center;
 }
 .algorithmHelp .help {
   width: 40vw;
@@ -90,10 +96,6 @@ body .container {
   color: #888888;
   margin-bottom: 1.5em;
   line-height: 20px;
-}
-.algorithmHelp .form1 {
-  width: 35vw;
-  /* height: 22em; */
 }
 .algorithmHelp .form1 div {
   display: flex;
@@ -143,7 +145,6 @@ body .container {
 }
 .specialSelection .container .special {
   text-align: center;
-  margin-bottom: 6vh;
 }
 .specialSelection .container .special h3 {
   font-size: 18px;
@@ -164,23 +165,20 @@ body .container {
 }
 .specialSelection .container .boxes {
   display: flex;
+  width: 19vw;
+  height: 150vh;
   flex-flow: column wrap;
-  width: 20vw;
-  height: 100vh;
-  align-items: center;
   flex-direction: column;
-  justify-content: space-between;
-  align-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .specialSelection .container .boxes .box {
   display: flex;
-  padding: 10px 0;
-  margin: 30px;
-  flex-flow: column wrap;
-  align-content: flex-start;
+  padding: 40px 40px;
+  flex-direction: column;
+  align-content: center;
   justify-content: center;
   color: #888888;
-  text-align: left;
 }
 .specialSelection .container .boxes .box img {
   width: 150px;
@@ -215,8 +213,8 @@ body .container {
 }
 .specialSelection .container #btnNewPage {
   position: absolute;
-  transform: translate(-50%, 95%);
-  bottom: -5%;
+  transform: translate(-50%, 100%);
+  bottom: 0%;
   left: 50%;
   width: 20vw;
   height: 7vh;
@@ -232,10 +230,7 @@ body .container {
 }
 
 .news {
-  display: flex;
-  justify-content: center;
-  flex-flow: wrap column;
-  align-items: center;
+  text-align: center;
   margin-top: 25vh;
 }
 .news .share {
@@ -266,35 +261,36 @@ body .container {
   margin-bottom: 1.5em;
   line-height: 20px;
 }
-.news #formShare {
+.news .form2 {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  position: relative;
 }
-.news #formShare .form2 {
+.news .form2 #formShare {
   display: flex;
   margin-bottom: 5vh;
   width: 70vw;
   justify-content: space-around;
 }
-.news #formShare .form2 div {
+.news .form2 #formShare div {
   display: flex;
   flex-direction: row;
   margin: 1.5em 0;
 }
-.news #formShare .form2 div label {
+.news .form2 #formShare div label {
   display: flex;
   flex-direction: column;
   font-size: 12px;
   color: #888888;
 }
-.news #formShare .form2 div label input {
+.news .form2 #formShare div label input {
   width: 25vw;
   height: 4.5vh;
   border: solid 1px #707070;
   margin-top: 2vh;
 }
-.news #formShare button {
+.news .form2 button {
   width: 20vw;
   height: 7vh;
   color: #888888;
@@ -302,8 +298,12 @@ body .container {
   cursor: pointer;
   background-color: #fff;
   border: solid 1px #707070;
+  position: absolute;
+  transform: translate(-50%, 100%);
+  bottom: 0%;
+  left: 50%;
 }
-.news #formShare button:hover {
+.news .form2 button:hover {
   background-color: #707070;
   color: #fff;
 }
