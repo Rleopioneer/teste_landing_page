@@ -75,6 +75,7 @@ body {
                 border-radius: 5px;
                 width: 11vw;
                 height: 7vh;
+                transition: ease-in-out 300ms;
                 
                 &:hover {
                     box-shadow: none;
@@ -88,6 +89,7 @@ body {
                 a {
                     text-decoration: none;
                     color: $secondary-color;
+                    transition: ease-in-out 300ms;
                 }
 
             }
@@ -173,6 +175,7 @@ body {
             cursor: pointer;
             background-color: #fff;
             border: solid 1px $primary-color;
+            transition: ease-in-out 300ms;
 
             &:hover {
                 background-color: $primary-color;
@@ -265,6 +268,7 @@ body {
                     cursor: pointer;
                     background-color: #fff;
                     border: solid 1px $primary-color;
+                    transition: ease-in-out 300ms;
             
                     &:hover {
                         background-color: $primary-color;
@@ -278,17 +282,34 @@ body {
         }
 
         #btnNewPage {
+            display: block;
             position: absolute;
             transform: translate(-50%, 100%);
             bottom: 0%;
             left: 50%;
             width: 20vw;
             height: 7vh;
+            text-decoration: none;
+            text-align: center;
             color: $secondary-color;
             font-size: 16px;
             cursor: pointer;
             background-color: #fff;
             border: solid 1px $primary-color;
+            transition: ease-in-out 300ms;
+            
+            a {
+                text-decoration: none;
+                text-align: center;
+                color: $secondary-color;
+                font-size: 16px;
+                transition: ease-in-out 300ms;
+
+                &:hover {
+                    background-color: $primary-color;
+                    color: #fff;
+                }
+            }
     
             &:hover {
                 background-color: $primary-color;
@@ -365,6 +386,7 @@ body {
                 label {
                     display: flex;
                     flex-direction: column;
+                    align-items: flex-start;
                     font-size: 12px;
                     color: $secondary-color;
                     
@@ -392,6 +414,7 @@ body {
             transform: translate(-50%, 100%);
             bottom: 0%;
             left: 50%;
+            transition: ease-in-out 300ms;
     
             &:hover {
                 background-color: $primary-color;

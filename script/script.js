@@ -1,10 +1,38 @@
 
 const form = document.querySelector('#form')
-
 form.onsubmit = function(e) {
     e.preventDefault()
     console.log(e)
+    
 
+    const url = `https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1`
+
+    const btnNewPage = document.querySelector('#btnNewPage')
+    
+
+    console.log(btnNewPage)
+
+    const toJson = response => response.json()
+
+    const onTheScreen = (response) => {
+        console.log(response)
+        const buttonUrl = response.nextPage
+
+        btnNewPage.innerHTML = `<a href="https://${buttonUrl}" target="_blank">Ainda mais produtos</a>`
+    
+    
+    
+    
+    }
+
+
+    fetch(url).then(toJson).then(onTheScreen).catch(errorMsg)
+
+    
+
+    
+
+    
     let temErro = false
 
     let inputNome = document.forms['form']['name']
@@ -54,6 +82,10 @@ form.onsubmit = function(e) {
         radio.classList.remove('error')
         let span = radio.nextSibling.nextSibling
         span.innerText = ''
+    } else {
+        function errorMsg(){
+            console.log('Erro')
+        }
     }
 
     if(!temErro) {
@@ -61,8 +93,9 @@ form.onsubmit = function(e) {
     }
 }
 
-const formShare = document.querySelector('#formShare')
 
+
+const formShare = document.querySelector('#formShare')
 formShare.onsubmit = function(e) {
     e.preventDefault()
     console.log(e)
@@ -98,3 +131,5 @@ formShare.onsubmit = function(e) {
     }
 
 }
+
+// https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1

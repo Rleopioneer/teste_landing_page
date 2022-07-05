@@ -66,6 +66,7 @@ body .error {
   border-radius: 5px;
   width: 11vw;
   height: 7vh;
+  transition: ease-in-out 300ms;
 }
 .header .navbar .navlist .navButtons:hover {
   box-shadow: none;
@@ -77,6 +78,7 @@ body .error {
 .header .navbar .navlist .navButtons a {
   text-decoration: none;
   color: #888888;
+  transition: ease-in-out 300ms;
 }
 
 .algorithmHelp .container {
@@ -135,6 +137,7 @@ body .error {
   cursor: pointer;
   background-color: #fff;
   border: solid 1px #707070;
+  transition: ease-in-out 300ms;
 }
 .algorithmHelp .form1 button:hover {
   background-color: #707070;
@@ -210,23 +213,39 @@ body .error {
   cursor: pointer;
   background-color: #fff;
   border: solid 1px #707070;
+  transition: ease-in-out 300ms;
 }
 .specialSelection .container .boxes .box button:hover {
   background-color: #707070;
   color: #fff;
 }
 .specialSelection .container #btnNewPage {
+  display: block;
   position: absolute;
   transform: translate(-50%, 100%);
   bottom: 0%;
   left: 50%;
   width: 20vw;
   height: 7vh;
+  text-decoration: none;
+  text-align: center;
   color: #888888;
   font-size: 16px;
   cursor: pointer;
   background-color: #fff;
   border: solid 1px #707070;
+  transition: ease-in-out 300ms;
+}
+.specialSelection .container #btnNewPage a {
+  text-decoration: none;
+  text-align: center;
+  color: #888888;
+  font-size: 16px;
+  transition: ease-in-out 300ms;
+}
+.specialSelection .container #btnNewPage a:hover {
+  background-color: #707070;
+  color: #fff;
 }
 .specialSelection .container #btnNewPage:hover {
   background-color: #707070;
@@ -285,6 +304,7 @@ body .error {
 .news .form2 #formShare div label {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   font-size: 12px;
   color: #888888;
 }
@@ -306,6 +326,7 @@ body .error {
   transform: translate(-50%, 100%);
   bottom: 0%;
   left: 50%;
+  transition: ease-in-out 300ms;
 }
 .news .form2 button:hover {
   background-color: #707070;
