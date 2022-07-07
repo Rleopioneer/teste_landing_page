@@ -170,16 +170,14 @@ body .error {
 .specialSelection .container .special h3:after {
   margin-left: 15px;
 }
-.specialSelection .container .boxes {
+.specialSelection .container #boxes {
   display: flex;
-  width: 19vw;
-  height: 150vh;
   flex-flow: column wrap;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.specialSelection .container .boxes .box {
+.specialSelection .container #boxes .box {
   display: flex;
   padding: 40px 40px;
   flex-direction: column;
@@ -187,24 +185,24 @@ body .error {
   justify-content: center;
   color: #888888;
 }
-.specialSelection .container .boxes .box img {
+.specialSelection .container #boxes .box img {
   width: 150px;
 }
-.specialSelection .container .boxes .box h4 {
+.specialSelection .container #boxes .box h4 {
   margin: 0.5em 0;
   font-size: 14px;
   font-weight: 100;
 }
-.specialSelection .container .boxes .box p {
+.specialSelection .container #boxes .box p {
   font-size: 12px;
   margin-top: 0.5em;
 }
-.specialSelection .container .boxes .box p:nth-child(4) {
+.specialSelection .container #boxes .box p:nth-child(4) {
   font-size: 16px;
   font-weight: bold;
   margin-top: 1em;
 }
-.specialSelection .container .boxes .box button {
+.specialSelection .container #boxes .box button {
   margin-top: 1em;
   width: 12em;
   height: 4vh;
@@ -215,12 +213,22 @@ body .error {
   border: solid 1px #707070;
   transition: ease-in-out 300ms;
 }
-.specialSelection .container .boxes .box button:hover {
+.specialSelection .container #boxes .box button:hover {
   background-color: #707070;
   color: #fff;
 }
+.specialSelection .container .beforeForm {
+  width: 19vw;
+  height: auto;
+}
+.specialSelection .container .afterForm {
+  width: 19vw;
+  height: 150vh;
+}
 .specialSelection .container #btnNewPage {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   transform: translate(-50%, 100%);
   bottom: 0%;
@@ -235,17 +243,6 @@ body .error {
   background-color: #fff;
   border: solid 1px #707070;
   transition: ease-in-out 300ms;
-}
-.specialSelection .container #btnNewPage a {
-  text-decoration: none;
-  text-align: center;
-  color: #888888;
-  font-size: 16px;
-  transition: ease-in-out 300ms;
-}
-.specialSelection .container #btnNewPage a:hover {
-  background-color: #707070;
-  color: #fff;
 }
 .specialSelection .container #btnNewPage:hover {
   background-color: #707070;

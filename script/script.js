@@ -1,38 +1,56 @@
 
 const form = document.querySelector('#form')
-form.onsubmit = function(e) {
-    e.preventDefault()
-    console.log(e)
-    
 
-    const url = `https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1`
+const enviar = document.querySelector('#enviar')
 
-    const btnNewPage = document.querySelector('#btnNewPage')
-    
+const url = `https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1`
 
-    console.log(btnNewPage)
+const btnNewPage = document.querySelector('#btnNewPage')
 
+const container = document.querySelector('.container')
+
+const boxes = document.querySelector('#boxes')
+
+enviar.onclick = function(e) {
+ 
     const toJson = response => response.json()
 
-    const onTheScreen = (response) => {
-        console.log(response)
-        const buttonUrl = response.nextPage
+    const buildProductBoxes = (response) => {
 
-        btnNewPage.innerHTML = `<a href="https://${buttonUrl}" target="_blank">Ainda mais produtos</a>`
-    
-    
-    
-    
+        boxes.classList.remove('beforeForm')
+        boxes.classList.add('afterForm')
+
+        for (let i = 0; i < response.products.length ; i ++) {
+            boxes.innerHTML += `
+                <div class="box">
+                    <img src="https://${response.products[i].image}" alt="Porduct Image" class="product_img">
+                    <h4> ${response.products[i].name} </h4>
+                    <p>${response.products[i].description}</p>
+                    <p>De: R$${response.products[i].oldPrice}</p>
+                    <p>Por:R$${response.products[i].price}</p>
+                    <p>ou ${response.products[0].installments.count} x de R$${response.products[0].installments.value}</p>
+                    <button>Comprar</button>
+                </div>
+
+                <a  id="btnNewPage" href="https://${response.nextPage}" target="_blank">Ainda mais produtos</a>
+
+                `
+            
+        }
+  
     }
 
+    function errorMsg(){
+        console.log('Erro')
+    }
 
-    fetch(url).then(toJson).then(onTheScreen).catch(errorMsg)
+    fetch(url).then(toJson).then(buildProductBoxes).catch(errorMsg)
 
-    
+    }
 
-    
+form.onsubmit = function(e) {
+    e.preventDefault()
 
-    
     let temErro = false
 
     let inputNome = document.forms['form']['name']
@@ -82,24 +100,18 @@ form.onsubmit = function(e) {
         radio.classList.remove('error')
         let span = radio.nextSibling.nextSibling
         span.innerText = ''
-    } else {
-        function errorMsg(){
-            console.log('Erro')
-        }
-    }
-
+    } 
+       
     if(!temErro) {
         form.submit()
     }
 }
 
-
-
 const formShare = document.querySelector('#formShare')
+
 formShare.onsubmit = function(e) {
     e.preventDefault()
-    console.log(e)
-
+    
     let temErro = false
 
     let inputNome = document.forms['formShare']['friendName']
@@ -131,5 +143,3 @@ formShare.onsubmit = function(e) {
     }
 
 }
-
-// https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1
