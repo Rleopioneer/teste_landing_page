@@ -37,6 +37,10 @@ enviar.onclick = function(e) {
                 `
             
         }
+
+        function newPage() {
+            console.log('Nova Página')
+        }
   
     }
 
