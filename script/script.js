@@ -5,6 +5,8 @@ const enviar = document.querySelector('#enviar')
 
 const url = `https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1`
 
+const newPage = document.querySelector('#newPage')
+
 const btnNewPage = document.querySelector('#btnNewPage')
 
 const container = document.querySelector('.container')
@@ -17,8 +19,7 @@ enviar.onclick = function(e) {
 
     const buildProductBoxes = (response) => {
 
-        boxes.classList.remove('beforeForm')
-        boxes.classList.add('afterForm')
+        console.log(response)
 
         for (let i = 0; i < response.products.length ; i ++) {
             boxes.innerHTML += `
@@ -31,18 +32,20 @@ enviar.onclick = function(e) {
                     <p>ou ${response.products[0].installments.count} x de R$${response.products[0].installments.value}</p>
                     <button>Comprar</button>
                 </div>
-
-                <a  id="btnNewPage" href="https://${response.nextPage}" target="_blank">Ainda mais produtos</a>
-
                 `
             
         }
+        
+        newPage.classList.add('visible')
+        newPage.classList.remove('hidden')
+        btnNewPage.onclick = function(e) {
+            fetch(`https://${response.nextPage}`).then(toJson).then(buildProductBoxes).catch(errorMsg)
 
-        function newPage() {
-            console.log('Nova Página')
         }
   
     }
+
+    
 
     function errorMsg(){
         console.log('Erro')

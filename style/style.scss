@@ -220,12 +220,20 @@ body {
         }
     
         #boxes {
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            width: 19vw;
+            height: auto;
+
+/* 
             display: flex;
             flex-flow: column wrap;
             flex-direction: column;
             flex-wrap: wrap;
             justify-content: space-evenly;
-    
+     */
             .box {
                 display: flex;
                 padding: 40px 40px;
@@ -279,17 +287,6 @@ body {
     
         }
 
-        .beforeForm {
-            width: 19vw;
-            height: auto;
-
-        }
-
-        .afterForm {
-            width: 19vw;
-            height: 150vh;
-        }
-
         #btnNewPage {
             display: flex;
             align-items: center;
@@ -314,6 +311,16 @@ body {
                 color: #fff;
             }
     
+        }
+
+        .hidden {
+
+            display: none;
+
+        }
+
+        .visible {
+            display: block;
         }
     }
 

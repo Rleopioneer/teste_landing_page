@@ -171,11 +171,17 @@ body .error {
   margin-left: 15px;
 }
 .specialSelection .container #boxes {
-  display: flex;
-  flex-flow: column wrap;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 19vw;
+  height: auto;
+  /* 
+              display: flex;
+              flex-flow: column wrap;
+              flex-direction: column;
+              flex-wrap: wrap;
+              justify-content: space-evenly;
+       */
 }
 .specialSelection .container #boxes .box {
   display: flex;
@@ -217,14 +223,6 @@ body .error {
   background-color: #707070;
   color: #fff;
 }
-.specialSelection .container .beforeForm {
-  width: 19vw;
-  height: auto;
-}
-.specialSelection .container .afterForm {
-  width: 19vw;
-  height: 150vh;
-}
 .specialSelection .container #btnNewPage {
   display: flex;
   align-items: center;
@@ -247,6 +245,12 @@ body .error {
 .specialSelection .container #btnNewPage:hover {
   background-color: #707070;
   color: #fff;
+}
+.specialSelection .container .hidden {
+  display: none;
+}
+.specialSelection .container .visible {
+  display: block;
 }
 
 .news {
