@@ -1,61 +1,52 @@
+const obj= {
+    form: document.querySelector('#form'),
 
-const form = document.querySelector('#form')
+    enviar: document.querySelector('#enviar'),
 
-const enviar = document.querySelector('#enviar')
+    boxes: document.querySelector('#boxes'),
 
-const url = `https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1`
+    newPage: document.querySelector('#newPage'),
 
-const newPage = document.querySelector('#newPage')
+    btnNewPage: document.querySelector('#btnNewPage'),
 
-const btnNewPage = document.querySelector('#btnNewPage')
+    formShare: document.querySelector('#formShare')
+}
 
-const container = document.querySelector('.container')
+const toJson = response => response.json()
 
-const boxes = document.querySelector('#boxes')
+function buildProductBoxes (response) {
 
-enviar.onclick = function(e) {
- 
-    const toJson = response => response.json()
+    console.log(response)
 
-    const buildProductBoxes = (response) => {
-
-        console.log(response)
-
-        for (let i = 0; i < response.products.length ; i ++) {
-            boxes.innerHTML += `
-                <div class="box">
-                    <img src="https://${response.products[i].image}" alt="Porduct Image" class="product_img">
-                    <h4> ${response.products[i].name} </h4>
-                    <p>${response.products[i].description}</p>
-                    <p>De: R$${response.products[i].oldPrice}</p>
-                    <p>Por:R$${response.products[i].price}</p>
-                    <p>ou ${response.products[0].installments.count} x de R$${response.products[0].installments.value}</p>
-                    <button>Comprar</button>
-                </div>
-                `
-            
-        }
+    for (let i = 0; i < response.products.length ; i ++) {
+        obj.boxes.innerHTML += `
+            <div class="box">
+                <img src="https://${response.products[i].image}" alt="Porduct Image" class="product_img">
+                <h4> ${response.products[i].name} </h4>
+                <p>${response.products[i].description}</p>
+                <p>De: R$${response.products[i].oldPrice}</p>
+                <p>Por:R$${response.products[i].price}</p>
+                <p>ou ${response.products[0].installments.count} x de R$${response.products[0].installments.value}</p>
+                <button>Comprar</button>
+            </div>
+            `
         
-        newPage.classList.add('visible')
-        newPage.classList.remove('hidden')
-        btnNewPage.onclick = function(e) {
-            fetch(`https://${response.nextPage}`).then(toJson).then(buildProductBoxes).catch(errorMsg)
-
-        }
-  
     }
-
     
-
-    function errorMsg(){
-        console.log('Erro')
+    obj.newPage.classList.add('visible')
+    obj.newPage.classList.remove('hidden')
+    obj.btnNewPage.onclick = function(e) {
+        fetch(`https://${response.nextPage}`).then(toJson).then(buildProductBoxes).catch(errorMsg)
+    
     }
 
-    fetch(url).then(toJson).then(buildProductBoxes).catch(errorMsg)
+}
 
-    }
+function errorMsg(){
+    console.log('Erro')
+}
 
-form.onsubmit = function(e) {
+obj.form.onsubmit = function(e) {
     e.preventDefault()
 
     let temErro = false
@@ -98,7 +89,6 @@ form.onsubmit = function(e) {
 
     let radio = document.forms['form']['radio']
     if (radio.checked === false) {
-        console.log(document.forms['form']['radio'])
         temErro = true
         radio.classList.add('error')
         let span = radio.nextSibling.nextSibling
@@ -108,15 +98,26 @@ form.onsubmit = function(e) {
         let span = radio.nextSibling.nextSibling
         span.innerText = ''
     } 
-       
-    if(!temErro) {
+
+    let enviar = document.forms['form']['enviar']
+    let enviarPressionado = ''
+           
+    if (!temErro) {
+        fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1').then(toJson).then(buildProductBoxes).catch(errorMsg)
         form.submit()
+        enviarPressionado = 'enviar'
+
+        if (enviarPressionado === 'enviar') {
+            //Garante que novas requisições sejam feitas somente no botão de nova página
+            console.log(enviar)
+            console.log(enviarPressionado)
+            boxes.innerHTML = ''
+        }
+        
     }
 }
 
-const formShare = document.querySelector('#formShare')
-
-formShare.onsubmit = function(e) {
+obj.formShare.onsubmit = function(e) {
     e.preventDefault()
     
     let temErro = false
