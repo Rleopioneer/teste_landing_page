@@ -8,17 +8,12 @@ body {
   font-family: "Helvetica Neue", sans-serif;
   font-size: 14px;
 }
-body .container {
-  width: 1100px;
-  margin: 0 auto;
-}
 body .error {
   color: red;
   margin-top: 0.5em;
 }
 
 .header {
-  width: 100%;
   height: 30em;
   background-color: #707070;
   color: #fff;
@@ -28,13 +23,13 @@ body .error {
 }
 .header p {
   padding: 1em;
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 .header h1 {
-  font-size: 40px;
+  font-size: 2.8rem;
 }
 .header .slogan {
-  font-size: 14px;
+  font-size: 1em;
   padding: 5vh;
 }
 .header .navbar {
@@ -50,13 +45,6 @@ body .error {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* Media Query (Mobile)
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 20px 10px;
-  list-style: none;
-  justify-content: center;
-   */
 }
 .header .navbar .navlist .navButtons {
   margin: 0px 30px;
@@ -80,58 +68,79 @@ body .error {
   color: #888888;
   transition: ease-in-out 300ms;
 }
+@media (max-width: 1024px) {
+  .header {
+    height: 40em;
+    margin: 0 auto;
+  }
+  .header .navbar .navlist {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px 10px;
+    list-style: none;
+    justify-content: center;
+  }
+  .header .navbar .navlist .navButtons {
+    margin: 0px 10px;
+    padding: 2.5vh 1vw;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    width: auto;
+  }
+}
 
 .algorithmHelp .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.algorithmHelp .help {
+.algorithmHelp .container .help {
   width: 40vw;
   height: 13em;
   padding-right: 3.5em;
   margin-top: 22px;
 }
-.algorithmHelp .help h2 {
+.algorithmHelp .container .help h2 {
   font-size: 20px;
   color: #888888;
   margin-bottom: 1.5em;
 }
-.algorithmHelp .help p {
-  font-size: 12px;
+.algorithmHelp .container .help p {
+  font-size: 0.7rem;
   color: #888888;
   margin-bottom: 1.5em;
   line-height: 20px;
 }
-.algorithmHelp .form1 div {
+.algorithmHelp .container .form1 div {
   display: flex;
   flex-direction: row;
   margin: 1.5em 0;
 }
-.algorithmHelp .form1 div label {
+.algorithmHelp .container .form1 div label {
   display: flex;
   flex-direction: column;
   font-size: 12px;
   color: #888888;
 }
-.algorithmHelp .form1 div label input {
+.algorithmHelp .container .form1 div label input {
   width: 25vw;
   height: 4.5vh;
   border: solid 1px #707070;
   margin-top: 7px;
 }
-.algorithmHelp .form1 .selection {
+.algorithmHelp .container .form1 .selection {
   display: flex;
   flex-direction: row;
 }
-.algorithmHelp .form1 .selection .fem {
+.algorithmHelp .container .form1 .selection .fem {
   margin-left: 1vw;
 }
-.algorithmHelp .form1 .selection input {
+.algorithmHelp .container .form1 .selection input {
   width: 14px;
   margin-right: 1vw;
 }
-.algorithmHelp .form1 button {
+.algorithmHelp .container .form1 button {
   width: 25vw;
   height: 5vh;
   cursor: pointer;
@@ -139,9 +148,28 @@ body .error {
   border: solid 1px #707070;
   transition: ease-in-out 300ms;
 }
-.algorithmHelp .form1 button:hover {
+.algorithmHelp .container .form1 button:hover {
   background-color: #707070;
   color: #fff;
+}
+@media (max-width: 1000px) {
+  .algorithmHelp .container .help {
+    width: auto;
+    height: auto;
+    padding: 0 2em;
+    margin-top: 22px;
+  }
+  .algorithmHelp .container .form1 {
+    margin: 0 auto;
+  }
+  .algorithmHelp .container .form1 div label input {
+    width: 90vw;
+    height: 7vh;
+  }
+  .algorithmHelp .container .form1 button {
+    width: 90vw;
+    height: 10vh;
+  }
 }
 
 .specialSelection {
@@ -175,13 +203,6 @@ body .error {
   grid-template-columns: repeat(4, 1fr);
   width: 19vw;
   height: auto;
-  /* 
-              display: flex;
-              flex-flow: column wrap;
-              flex-direction: column;
-              flex-wrap: wrap;
-              justify-content: space-evenly;
-       */
 }
 .specialSelection .container #boxes .box {
   display: flex;
@@ -332,6 +353,55 @@ body .error {
 .news .form2 button:hover {
   background-color: #707070;
   color: #fff;
+}
+@media (max-width: 1024px) {
+  .news .form2 {
+    position: relative;
+  }
+  .news .form2 #formShare {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-bottom: 5vh;
+    width: 90vw;
+    justify-content: space-around;
+  }
+  .news .form2 #formShare div {
+    display: flex;
+    flex-direction: row;
+    margin: 1.5em 0;
+  }
+  .news .form2 #formShare div label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 12px;
+    color: #888888;
+  }
+  .news .form2 #formShare div label input {
+    width: 80vw;
+    height: 4.5vh;
+    border: solid 1px #707070;
+    margin-top: 2vh;
+  }
+  .news .form2 button {
+    width: 20vw;
+    height: 7vh;
+    color: #888888;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #fff;
+    border: solid 1px #707070;
+    position: absolute;
+    transform: translate(-50%, 100%);
+    bottom: 0%;
+    left: 50%;
+    transition: ease-in-out 300ms;
+  }
+  .news .form2 button:hover {
+    background-color: #707070;
+    color: #fff;
+  }
 }
 
 .footer {

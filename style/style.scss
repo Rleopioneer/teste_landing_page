@@ -12,11 +12,6 @@ body {
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 14px;
 
-    .container {
-        width: 1100px;;
-        margin: 0 auto;
-    }
-
     .error {
         color: red;
         margin-top: 0.5em;
@@ -24,7 +19,7 @@ body {
 }
 
 .header {
-    width: 100%;
+    
     height: 30em;
     background-color: $primary-color;
     color: #fff ;
@@ -33,15 +28,15 @@ body {
 
     p {
         padding: 1em;
-        font-size: 20px;
+        font-size: 1.2rem;
     }
 
     h1 {
-        font-size: 40px;
+        font-size: 2.8rem;
     }
 
     .slogan {
-        font-size: 14px;
+        font-size: 1em;
         padding: 5vh;
     }
 
@@ -59,14 +54,7 @@ body {
             justify-content: center;
             align-items: center;
 
-            /* Media Query (Mobile)
-            display: grid;
-            grid-template-columns: auto auto;
-            gap: 20px 10px;
-            list-style: none;
-            justify-content: center;
-             */
-
+            
             .navButtons {
                 margin: 0px 30px;
                 padding: 2.5vh 1vw;
@@ -97,7 +85,34 @@ body {
         }
     }
 
-    
+    @media (max-width: 1024px) {
+
+        height: 40em;
+        margin: 0 auto;
+
+        .navbar {
+            .navlist {
+
+                display: grid;
+                grid-template-columns: repeat(2, 2fr);
+                gap: 20px 10px;
+                list-style: none;
+                justify-content: center;
+
+                .navButtons {
+                    margin: 0px 10px;
+                    padding: 2.5vh 1vw;
+                    background-color: #fff;
+                    text-align: center;
+                    border-radius: 5px;
+                    width: auto;
+                }
+
+            }
+        }
+        
+    }
+
 }
 
 .algorithmHelp {
@@ -107,82 +122,119 @@ body {
         flex-wrap: wrap;
         justify-content: center;
 
-    }
+        .help {
+            width: 40vw;
+            height: 13em;
+            padding-right: 3.5em;
+            margin-top: 22px;
     
-    
-
-    .help {
-        width: 40vw;
-        height: 13em;
-        padding-right: 3.5em;
-        margin-top: 22px;
-
-        h2 {
-            font-size: 20px;
-            color: $secondary-color;
-            margin-bottom: 1.5em;
-        }
-
-        p {
-            font-size: 12px;
-            color: $secondary-color;
-            margin-bottom: 1.5em;
-            line-height: 20px;
-
-        }
-    }
-
-    .form1 {
-
-        div {
-            display: flex;
-            flex-direction: row;
-            margin: 1.5em 0;
-
-            label {
-                display: flex;
-                flex-direction: column;
-                font-size: 12px;
+            h2 {
+                font-size: 20px;
                 color: $secondary-color;
-                
+                margin-bottom: 1.5em;
+            }
+    
+            p {
+                font-size: 0.7rem;
+                color: $secondary-color;
+                margin-bottom: 1.5em;
+                line-height: 20px;
+    
+            }
+        }
+    
+        .form1 {
+    
+            div {
+                display: flex;
+                flex-direction: row;
+                margin: 1.5em 0;
+    
+                label {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 12px;
+                    color: $secondary-color;
+                    
+                    input {
+                        width: 25vw;
+                        height: 4.5vh;
+                        border: solid 1px $primary-color;
+                        margin-top: 7px
+                    }
+                }
+            }
+    
+            .selection {
+                display: flex;
+                flex-direction: row;
+    
+                .fem {
+                    margin-left: 1vw;
+                }
+    
                 input {
-                    width: 25vw;
-                    height: 4.5vh;
-                    border: solid 1px $primary-color;
-                    margin-top: 7px
+                    width: 14px;
+                    margin-right: 1vw;
+                }
+    
+            }
+    
+            button {
+                width: 25vw;
+                height: 5vh;
+                cursor: pointer;
+                background-color: #fff;
+                border: solid 1px $primary-color;
+                transition: ease-in-out 300ms;
+    
+                &:hover {
+                    background-color: $primary-color;
+                    color: #fff;
                 }
             }
         }
 
-        .selection {
-            display: flex;
-            flex-direction: row;
-
-            .fem {
-                margin-left: 1vw;
-            }
-
-            input {
-                width: 14px;
-                margin-right: 1vw;
-            }
-
-        }
-
-        button {
-            width: 25vw;
-            height: 5vh;
-            cursor: pointer;
-            background-color: #fff;
-            border: solid 1px $primary-color;
-            transition: ease-in-out 300ms;
-
-            &:hover {
-                background-color: $primary-color;
-                color: #fff;
-            }
-        }
     }
+
+    @media (max-width: 1000px) {
+
+        .container {
+
+            .help {
+                width: auto;
+                height: auto;
+                padding: 0 2em;
+                margin-top: 22px;
+            }
+
+            .form1 {
+                margin: 0 auto;
+
+                div {
+
+                    label {
+
+                        input {
+
+                            width: 90vw;
+                            height: 7vh
+                        }
+
+                    } 
+                }
+
+                button {
+                    width: 90vw;
+                    height: 10vh;
+                }
+            }
+
+        }
+
+    
+    }
+
 }
 
 .specialSelection {
@@ -223,17 +275,9 @@ body {
 
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-
             width: 19vw;
             height: auto;
 
-/* 
-            display: flex;
-            flex-flow: column wrap;
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-     */
             .box {
                 display: flex;
                 padding: 40px 40px;
@@ -360,8 +404,6 @@ body {
 
     }
 
-
-
     p {
         margin-bottom: 4vh;
         font-size: 14px;
@@ -425,6 +467,67 @@ body {
                 background-color: $primary-color;
                 color: #fff;
             }
+        }
+
+    }
+
+    @media (max-width: 1024px) {
+        .form2 {
+
+            position: relative;
+    
+            #formShare {
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                margin-bottom: 5vh;
+                width: 90vw;
+                justify-content: space-around;
+        
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    margin: 1.5em 0;
+        
+                    label {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        font-size: 12px;
+                        color: $secondary-color;
+                        
+                        input {
+                            width: 80vw;
+                            height: 4.5vh;
+                            border: solid 1px $primary-color;
+                            margin-top: 2vh;
+                        }
+                    }
+    
+                }
+        
+            }
+    
+            button {
+                width: 20vw;
+                height: 7vh;
+                color: $secondary-color;
+                font-size: 16px;
+                cursor: pointer;
+                background-color: #fff;
+                border: solid 1px $primary-color;
+                position: absolute;
+                transform: translate(-50%, 100%);
+                bottom: 0%;
+                left: 50%;
+                transition: ease-in-out 300ms;
+        
+                &:hover {
+                    background-color: $primary-color;
+                    color: #fff;
+                }
+            }
+    
         }
 
     }
