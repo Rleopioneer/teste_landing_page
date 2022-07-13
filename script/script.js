@@ -21,13 +21,18 @@ function buildProductBoxes (response) {
     for (let i = 0; i < response.products.length ; i ++) {
         obj.boxes.innerHTML += `
             <div class="box">
-                <img src="https://${response.products[i].image}" alt="Porduct Image" class="product_img">
-                <h4> ${response.products[i].name} </h4>
-                <p>${response.products[i].description}</p>
-                <p>De: R$${response.products[i].oldPrice}</p>
-                <p>Por:R$${response.products[i].price}</p>
-                <p>ou ${response.products[0].installments.count} x de R$${response.products[0].installments.value}</p>
-                <button>Comprar</button>
+                <div class="img">
+                    <img src="https://${response.products[i].image}" alt="Porduct Image" class="product_img">
+                </div>
+                 
+                <div class="productText">    
+                    <h4> ${response.products[i].name} </h4>
+                    <p>${response.products[i].description}</p>
+                    <p>De: R$${response.products[i].oldPrice}</p>
+                    <p>Por:R$${response.products[i].price}</p>
+                    <p>ou ${response.products[0].installments.count} x de R$${response.products[0].installments.value}</p>
+                    <button>Comprar</button>
+                </div>
             </div>
             `
         
