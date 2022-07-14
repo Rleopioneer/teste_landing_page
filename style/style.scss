@@ -305,7 +305,7 @@ body {
             justify-content: center;
             width: 19vw;
             height: auto;
-            margin: 0 auto;
+            margin: 5em auto;
 
             .box {
                 display: flex;
@@ -318,11 +318,6 @@ body {
                 .img {
                     width: 15em;
                     height: 12em;
-
-                    .fa-sample {
-                        color: #707070;
-                    }
-                    
 
                     img {
                         width: 12em;
@@ -472,6 +467,7 @@ body {
                 
                 width: 70vw;
                 height: 7vh;
+                margin-top: 2em;
         
             }
 
@@ -521,6 +517,7 @@ body {
     @media (max-width: 425px) {
 
         .container {
+
             #boxes {
                 margin-top: 5em;
                 display: grid;
@@ -531,7 +528,7 @@ body {
                 .box {
 
                     display: flex;
-                    padding: 0;
+                    padding: 2em 1em;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
@@ -545,6 +542,19 @@ body {
                     }
                 }
             }
+
+            #newPage {
+
+                margin-top: 5em;
+
+                #btnNewPage {
+                
+                    width: 70vw;
+                    height: 7vh;        
+                }
+
+            }
+            
 
         }
 
