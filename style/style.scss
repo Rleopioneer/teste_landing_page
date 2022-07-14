@@ -103,7 +103,7 @@ body {
 
         height: 40em;
         margin: 0 auto;
-        clip-path: polygon(0% 0, 100% 0, 100% 85%, 0% 65%);
+        clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 85%);
 
         .container {
 
@@ -271,28 +271,22 @@ body {
         margin-top: 10em;
 
         .special {
+
+            border-top: 1px solid $primary-color;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+            display: block;
             text-align: center;
+            width: 70vw;
+            margin: 0 auto;
+            
     
-            h3 {
+            legend {
+                padding: 5px 10px;
                 font-size: 18px;
                 color: $secondary-color;
                 
-    
-                &:before, &:after {
-                    content: ' ';
-                    position: absolute;
-                    width: 25%;
-                    border-top: 1px solid $secondary-color;
-                    margin-top: 1vh;
-                }
-    
-                &:before {
-                    margin-left: -355px;
-                }
-    
-                &:after {
-                    margin-left: 15px;
-                }
                 
             }
     
@@ -420,7 +414,6 @@ body {
                 width: auto;
                 height: auto;
 
-                
             }
 
         }
@@ -444,8 +437,7 @@ body {
                     padding: 0;
                     flex-direction: row;
                     align-content: center;
-                    justify-content: center;
-                    color: $secondary-color;
+                    
 
                     .productText {
                         p {
@@ -481,14 +473,7 @@ body {
             
             .special {
 
-                h3 {
-                    &:before, &:after {
-
-                        display: none;
-
-                    }
-                }
-
+                width: 100vw;
 
             }
             
@@ -531,9 +516,7 @@ body {
                     padding: 2em 1em;
                     flex-direction: column;
                     align-items: center;
-                    justify-content: center;
-                    color: $secondary-color;
-
+                    
                     .img {
                         img {
                             width: 40vw;
@@ -571,30 +554,20 @@ body {
     
 
     .share {
+            border-top: 1px solid $primary-color;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+            display: block;
             text-align: center;
-            margin-bottom: 6vh;
-
-        h3 {
-            font-size: 18px;
-            color: $secondary-color;
+            width: 70vw;
+            margin: 6vh auto;
             
 
-            &:before, &:after {
-                content: ' ';
-                position: absolute;
-                width: 25%;
-                border-top: 1px solid $secondary-color;
-                margin-top: 1vh;
-            }
-    
-            &:before {
-                margin-left: -345px;
-            }
-    
-            &:after {
-                margin-left: 5px;
-            }
-             
+        legend {
+            font-size: 18px;
+            color: $secondary-color;
+        
         }
 
     }
@@ -666,14 +639,11 @@ body {
 
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 600px) {
 
         .share {
-            h3 {
-                &:before, &:after {
-                    display: none;
-                }
-            }
+            
+            width: 100vw;
         }   
        
        
@@ -692,20 +662,17 @@ body {
                 div {
                     display: flex;
                     flex-direction: row;
-                    margin: 1.5em 0;
+                    
         
                     label {
                         display: flex;
                         flex-direction: column;
                         align-items: flex-start;
-                        font-size: 12px;
-                        color: $secondary-color;
+                        
                         
                         input {
-                            width: 80vw;
-                            height: 4.5vh;
-                            border: solid 1px $primary-color;
-                            margin-top: 2vh;
+                            width: 85vw;
+                            height: 6vh;
                         }
                     }
     
@@ -715,24 +682,9 @@ body {
     
             button {
                 width: 70vw;
-                height: 7vh;
-                color: $secondary-color;
-                font-size: 16px;
-                cursor: pointer;
-                background-color: #fff;
-                border: solid 1px $primary-color;
-                position: absolute;
-                transform: translate(-50%, 100%);
-                bottom: 0%;
-                left: 50%;
-                transition: ease-in-out 300ms;
-        
-                &:hover {
-                    background-color: $primary-color;
-                    color: #fff;
-                }
+                height: 6vh;
             }
-    
+                
         }
 
     }
