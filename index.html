@@ -50,36 +50,31 @@
             </div>
     
             <div class="form1">
-                <form id="form" target="_blank" action="gravasDados.html">
+                <form id="form" target="_blank" action="gravarDados.html">
                     <div>
                         <label for="name">Seu Nome:
-                            <input type="text" name="name" id="name">
+                            <input type="text" name="name" id="name" >
                             <span class="error"></span>
                         </label>
                     </div>
                     <div>
                         <label for="email">E-mail:
-                            <input type="email" name="email" id="email">
+                            <input type="email" name="email" id="email" >
                             <span class="error"></span>
                         </label>
                     </div>
                     <div>
                         <label for="cpf">CPF:
-                            <input type="number" name="cpf" id="cpf">
+                            <input type="text" name="cpf" id="cpf" >
                             <span class="error"></span>
                         </label>
                     </div>
                     <div class="selection">
-                        <input type="radio" name="radio" value="masculino">
-                        <label  class="radio" for="radio">Masculino 
+                        <label  class="radio" for="radio">
+                            <input type="radio" name="radio" value="masculino" class="masc"> Masculino 
+                            <input type="radio" name="radio" value="feminino" class="fem"> Feminino
                             <span class="error"></span>
                         </label>
-    
-                        <input type="radio" name="radio" value="feminino" class="fem">
-                        <label class="radio" for="radio">Feminino 
-                            <span class="error"></span>
-                        </label>
-                        <span class="error"></span>
                     </div>
                     <div>
                         <button id="enviar" type="submit">Enviar</button>
@@ -148,7 +143,7 @@
             <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
     
             <div class="form2">
-                <form id="formShare" target="_blank" action="gravasDados.html">
+                <form id="formShare" target="_blank" action="gravarDados.html">
                     <div>
                         <label for="friendName">Nome do seu amigo:
                             <input type="text" name="friendName" id="friendName">

@@ -16,9 +16,8 @@ const toJson = response => response.json()
 
 function buildProductBoxes (response) {
 
-    console.log(response)
-
     for (let i = 0; i < response.products.length ; i ++) {
+
         obj.boxes.innerHTML += `
             <div class="box">
                 <div class="img">
@@ -70,6 +69,7 @@ obj.form.onsubmit = function(e) {
 
     let inputEmail = document.forms['form']['email']
     if (!inputEmail.value) {
+        
         temErro = true
         inputEmail.classList.add('error')
         let span = inputEmail.nextSibling.nextSibling
@@ -81,6 +81,7 @@ obj.form.onsubmit = function(e) {
     }
 
     let inputCpf = document.forms['form']['cpf']
+     
     if (!inputCpf.value) {
         temErro = true
         inputEmail.classList.add('error')
@@ -93,14 +94,16 @@ obj.form.onsubmit = function(e) {
     }
 
     let radio = document.forms['form']['radio']
-    if (radio.checked === false) {
+    console.log(radio)
+    if (!radio.value ) {
         temErro = true
-        radio.classList.add('error')
-        let span = radio.nextSibling.nextSibling
+        console.log('erro')
+        radio[1].classList.add('error')
+        let span = radio[1].nextSibling.nextSibling
         span.innerText = 'Selecione uma opção'
-    } else if(radio.checked === true) {
-        radio.classList.remove('error')
-        let span = radio.nextSibling.nextSibling
+    } else {
+        radio[1].classList.remove('error')
+        let span = radio[1].nextSibling.nextSibling
         span.innerText = ''
     } 
 
@@ -114,8 +117,7 @@ obj.form.onsubmit = function(e) {
 
         if (enviarPressionado === 'enviar') {
             //Garante que novas requisições sejam feitas somente no botão de nova página
-            console.log(enviar)
-            console.log(enviarPressionado)
+            
             boxes.innerHTML = ''
         }
         
