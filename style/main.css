@@ -37,6 +37,7 @@ body .formSend {
 }
 .header .container .contentText h1 {
   font-size: 2.5rem;
+  text-shadow: 1px 0px 10px rgba(0, 0, 0, 0.5490196078);
 }
 .header .container .contentText .slogan {
   font-size: 0.875em;
@@ -65,20 +66,17 @@ body .formSend {
   text-align: center;
   border-radius: 5px;
   width: 11vw;
-  height: 7vh;
-  transition: ease-in-out 300ms;
+  height: 6vh;
+  box-shadow: 1px 2px 5px 0px rgba(0, 2, 1, 0.6901960784);
+  transition: ease-out 350ms;
+  cursor: pointer;
 }
 .header .container .navbar .navlist .navButtons:hover {
   box-shadow: none;
-  cursor: pointer;
-}
-.header .container .navbar .navlist .navButtons:hover a {
-  border-bottom: 1px solid #888888;
 }
 .header .container .navbar .navlist .navButtons a {
   text-decoration: none;
-  color: #888888;
-  transition: ease-in-out 300ms;
+  color: #707070;
 }
 @media (max-width: 768px) {
   .header {

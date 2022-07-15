@@ -21,6 +21,7 @@
         
             h1 {
                 font-size: 2.5rem;
+                text-shadow: 1px 0px 10px #0000008c;
             }
         
             .slogan {
@@ -54,22 +55,21 @@
                     text-align: center;
                     border-radius: 5px;
                     width: 11vw;
-                    height: 7vh;
-                    transition: ease-in-out 300ms;
+                    height: 6vh;
+                    box-shadow: 1px 2px 5px 0px #000201b0;
+                    transition: ease-out 350ms;
+                    cursor: pointer;
                     
                     &:hover {
                         box-shadow: none;
-                        cursor: pointer;
+                        
                     }
-    
-                    &:hover a {
-                        border-bottom: 1px solid $secondary-color;
-                    }               
+                  
     
                     a {
                         text-decoration: none;
-                        color: $secondary-color;
-                        transition: ease-in-out 300ms;
+                        color: $primary-color;
+
                     }
     
                 }
