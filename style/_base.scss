@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+
+    .error {
+        color: red;
+        margin-top: 0.5em;
+    }
+
+    .formSend {
+        color: rgb(0, 168, 70);
+        margin-top: 0.5em;
+        text-align: center;
+    }
+}

@@ -1,0 +1,284 @@
+
+.specialSelection {
+    position: relative;
+    
+    .container {
+
+        margin-top: 10em;
+
+        .special {
+
+            border-top: 1px solid $primary-color;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+            display: block;
+            text-align: center;
+            width: 70vw;
+            margin: 0 auto;
+            
+    
+            legend {
+                padding: 5px 10px;
+                font-size: 18px;
+                color: $secondary-color;
+                
+                
+            }
+    
+        }
+    
+        #boxes {
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            width: 19vw;
+            height: auto;
+            margin: 5em auto;
+
+            .box {
+                display: flex;
+                padding: 2.5em 4em;
+                flex-direction: column;
+                align-content: center;
+                justify-content: center;
+                color: $secondary-color;
+
+                .img {
+                    width: 15em;
+                    height: 12em;
+
+                    img {
+                        width: 12em;
+                        padding: 1em;
+                    }
+
+                }
+
+                .productText {
+
+                    padding: 0.5em;
+
+                    h4 {
+                        margin: 0.5em 0;
+                        font-size: 14px;
+                        font-weight: 100;
+                        
+                        
+                    }
+        
+                    p {
+                        font-size: 12px;
+                        margin-top: 0.5em;
+        
+                        &:nth-child(4) {
+                            font-size: 16px;
+                            font-weight: bold;
+                            margin-top: 1em;
+                        }
+                    }
+                       
+                    button {
+                        margin-top: 1em;
+                        width: 12em;
+                        height: 4vh;
+                        color: $secondary-color;
+                        font-size: 16px;
+                        cursor: pointer;
+                        background-color: #fff;
+                        border: solid 1px $primary-color;
+                        transition: ease-in-out 300ms;
+                
+                        &:hover {
+                            background-color: $primary-color;
+                            color: #fff;
+                        }
+                    
+                    }
+
+                }
+    
+            }
+    
+        }
+
+        #btnNewPage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            transform: translate(-50%, 100%);
+            bottom: 0%;
+            left: 50%;
+            width: 20vw;
+            height: 7vh;
+            text-decoration: none;
+            text-align: center;
+            color: $secondary-color;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #fff;
+            border: solid 1px $primary-color;
+            transition: ease-in-out 300ms;
+    
+            &:hover {
+                background-color: $primary-color;
+                color: #fff;
+            }
+    
+        }
+
+        .hidden {
+
+            display: none;
+
+        }
+
+        .visible {
+            display: block;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        
+        .container {
+            #boxes {
+
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                width: auto;
+                height: auto;
+
+            }
+
+        }
+       
+        
+    }
+
+    @media (max-width: 768px) {
+
+        .container {
+
+            #boxes {
+
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                width: auto;
+                height: auto;
+
+                .box {
+                    display: flex;
+                    padding: 0;
+                    flex-direction: row;
+                    align-content: center;
+                    
+
+                    .productText {
+                        p {
+                            &:nth-child(2) {
+                                display: none;
+                            }
+
+                            &:nth-child(4) {
+                                font-size: 16px;
+                                font-weight: bold;
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #btnNewPage {
+                
+                width: 70vw;
+                height: 7vh;
+                margin-top: 2em;
+        
+            }
+
+        }
+        
+    }
+
+    @media (max-width: 600px) {
+
+        .container {
+            
+            .special {
+
+                width: 100vw;
+
+            }
+            
+            #boxes {
+
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                width: auto;
+                height: auto;
+
+                .box {
+
+                    .img {
+                        img {
+                            width: 35vw;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+
+        }
+        
+    }
+
+    @media (max-width: 425px) {
+
+        .container {
+
+            #boxes {
+                margin-top: 5em;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                width: auto;
+                height: auto;
+
+                .box {
+
+                    display: flex;
+                    padding: 2em 1em;
+                    flex-direction: column;
+                    align-items: center;
+                    
+                    .img {
+                        img {
+                            width: 40vw;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+
+            #newPage {
+
+                margin-top: 5em;
+
+                #btnNewPage {
+                
+                    width: 70vw;
+                    height: 7vh;        
+                }
+
+            }
+            
+
+        }
+
+
+        
+    }
+
+}

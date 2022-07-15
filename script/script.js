@@ -73,7 +73,7 @@ obj.form.onsubmit = function(e) {
         temErro = true
         inputEmail.classList.add('error')
         let span = inputEmail.nextSibling.nextSibling
-        span.innerText = 'E-mail inválido'
+        span.innerText = 'Digite um E-mail'
     } else {
         inputEmail.classList.remove('error')
         let span = inputEmail.nextSibling.nextSibling

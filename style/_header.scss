@@ -1,0 +1,113 @@
+
+.header {
+    
+    height: 30em;
+    background-color: $primary-color;
+    color: #fff ;
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 75%);
+    
+    .container {
+        margin: 0 auto;
+        
+
+        .contentText {
+
+            text-align: center;
+
+            p {
+                padding: 1em;
+                font-size: 1.2rem;
+            }
+        
+            h1 {
+                font-size: 2.5rem;
+            }
+        
+            .slogan {
+                font-size: 0.875em;
+                padding: 5vh;
+            }
+
+        }
+
+        .navbar {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+    
+            .navlist {
+                display: flex;
+                list-style: none;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+    
+                
+                .navButtons {
+                    margin: 0px 30px;
+                    padding: 2.5vh 1vw;
+                    background-color: #fff;
+                    text-align: center;
+                    border-radius: 5px;
+                    width: 11vw;
+                    height: 7vh;
+                    transition: ease-in-out 300ms;
+                    
+                    &:hover {
+                        box-shadow: none;
+                        cursor: pointer;
+                    }
+    
+                    &:hover a {
+                        border-bottom: 1px solid $secondary-color;
+                    }               
+    
+                    a {
+                        text-decoration: none;
+                        color: $secondary-color;
+                        transition: ease-in-out 300ms;
+                    }
+    
+                }
+    
+            }
+        }
+
+    } 
+
+    @media (max-width: 768px) {
+
+        height: 35em;
+        margin: 0 auto;
+        clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 85%);
+
+        .container {
+
+            .navbar {
+
+                .navlist {
+    
+                    display: grid;
+                    grid-template-columns: repeat(2, 2fr);
+                    gap: 20px 10px;
+                    list-style: none;
+                    justify-content: center;
+    
+                    .navButtons {
+                        margin: 0px 0.4em;
+                        padding: 1.2em 6vw;
+                        text-align: center;
+                        border-radius: 5px;
+                        width: auto;
+                    }
+    
+                }
+            }
+
+        }
+ 
+    }
+
+}

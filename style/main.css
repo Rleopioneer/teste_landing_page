@@ -165,6 +165,7 @@ body .formSend {
 .algorithmHelp .container .form1 .btn {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .algorithmHelp .container .form1 .btn button {
   width: 25vw;
@@ -192,11 +193,11 @@ body .formSend {
     width: 85vw;
     height: 6vh;
   }
-  .algorithmHelp .container .form1 div {
+  .algorithmHelp .container .form1 .btn {
     display: flex;
     justify-content: center;
   }
-  .algorithmHelp .container .form1 div button {
+  .algorithmHelp .container .form1 .btn button {
     width: 70vw;
     height: 5vh;
   }
@@ -508,4 +509,4 @@ body .formSend {
   left: -50%;
   transform: translate(50%, 40%);
   color: #fff;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */

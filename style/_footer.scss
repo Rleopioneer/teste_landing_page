@@ -1,0 +1,19 @@
+.footer {
+    width: 100%;
+    height: 20em;
+    background-color: $primary-color;
+    margin-top: 10em;
+    clip-path: polygon(0% 30%, 100% 0%, 100% 100%, 0% 100%);
+    text-align: center;
+    position: absolute;
+
+    .footerText {
+        position: relative;
+        bottom: -60%;
+        left: -50%;
+        transform: translate(50%, 40%);
+        color: #fff
+    }
+
+    
+}
