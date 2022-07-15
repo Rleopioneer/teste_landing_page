@@ -46,12 +46,6 @@
                 justify-content: center;
                 color: $secondary-color;
 
-                &:last-child {
-
-                    margin-bottom: 3em;
-    
-                }
-
                 .img {
                     width: 15em;
                     height: 12em;
@@ -178,9 +172,15 @@
                 width: auto;
                 height: auto;
 
+                &:last-child {
+
+                    margin-bottom: 3em;
+    
+                }
+
                 .box {
                     display: flex;
-                    padding: 0;
+                    padding: 2em 1em;
                     flex-direction: row;
                     align-content: center;
                     
@@ -218,9 +218,7 @@
         .container {
             
             .special {
-
                 width: 100vw;
-
             }
             
             #boxes {
@@ -231,6 +229,8 @@
                 height: auto;
 
                 .box {
+
+                    padding: 2em 1em;
 
                     .img {
                         img {

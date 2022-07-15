@@ -251,9 +251,6 @@ body .formSend {
   justify-content: center;
   color: #888888;
 }
-.specialSelection .container #boxes .box:last-child {
-  margin-bottom: 3em;
-}
 .specialSelection .container #boxes .box .img {
   width: 15em;
   height: 12em;
@@ -341,9 +338,12 @@ body .formSend {
     width: auto;
     height: auto;
   }
+  .specialSelection .container #boxes:last-child {
+    margin-bottom: 3em;
+  }
   .specialSelection .container #boxes .box {
     display: flex;
-    padding: 0;
+    padding: 2em 1em;
     flex-direction: row;
     align-content: center;
   }
@@ -370,6 +370,9 @@ body .formSend {
     grid-template-columns: repeat(1, 1fr);
     width: auto;
     height: auto;
+  }
+  .specialSelection .container #boxes .box {
+    padding: 2em 1em;
   }
   .specialSelection .container #boxes .box .img img {
     width: 35vw;
@@ -506,7 +509,7 @@ body .formSend {
   }
   .news .form2 button {
     width: 70vw;
-    height: 6vh;
+    height: 5vh;
   }
 }
 

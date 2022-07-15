@@ -94,8 +94,7 @@ obj.form.onsubmit = function(e) {
     }
 
     let radio = document.forms['form']['radio']
-    console.log(radio)
-    if (!radio.value ) {
+     if (!radio.value ) {
         temErro = true
         console.log('erro')
         radio[1].classList.add('error')
