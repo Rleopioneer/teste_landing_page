@@ -109,6 +109,7 @@ obj.form.onsubmit = function(e) {
 
     let enviar = document.forms['form']['enviar']
     let enviarPressionado = ''
+
            
     if (!temErro) {
         fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1').then(toJson).then(buildProductBoxes).catch(errorMsg)
@@ -117,6 +118,10 @@ obj.form.onsubmit = function(e) {
 
         if (enviarPressionado === 'enviar') {
             //Garante que novas requisições sejam feitas somente no botão de nova página
+
+            enviar.classList.add('formSend')
+            let span = enviar.nextSibling.nextSibling
+            span.innerText = 'Formulário enviado com sucesso'
             
             boxes.innerHTML = ''
         }

@@ -12,6 +12,11 @@ body .error {
   color: red;
   margin-top: 0.5em;
 }
+body .formSend {
+  color: rgb(0, 168, 70);
+  margin-top: 0.5em;
+  text-align: center;
+}
 
 .header {
   height: 30em;
@@ -75,7 +80,7 @@ body .error {
 }
 @media (max-width: 768px) {
   .header {
-    height: 40em;
+    height: 35em;
     margin: 0 auto;
     -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 85%);
             clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 85%);
@@ -157,7 +162,11 @@ body .error {
   margin-right: 10px;
   margin-left: 10px;
 }
-.algorithmHelp .container .form1 button {
+.algorithmHelp .container .form1 .btn {
+  display: flex;
+  flex-direction: column;
+}
+.algorithmHelp .container .form1 .btn button {
   width: 25vw;
   height: 5vh;
   cursor: pointer;
@@ -165,7 +174,7 @@ body .error {
   border: solid 1px #707070;
   transition: ease-in-out 300ms;
 }
-.algorithmHelp .container .form1 button:hover {
+.algorithmHelp .container .form1 .btn button:hover {
   background-color: #707070;
   color: #fff;
 }

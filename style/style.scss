@@ -16,6 +16,12 @@ body {
         color: red;
         margin-top: 0.5em;
     }
+
+    .formSend {
+        color: rgb(0, 168, 70);
+        margin-top: 0.5em;
+        text-align: center;
+    }
 }
 
 .header {
@@ -98,7 +104,7 @@ body {
 
     @media (max-width: 768px) {
 
-        height: 40em;
+        height: 35em;
         margin: 0 auto;
         clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 85%);
 
@@ -210,17 +216,23 @@ body {
         
             }
     
-            button {
-                width: 25vw;
-                height: 5vh;
-                cursor: pointer;
-                background-color: #fff;
-                border: solid 1px $primary-color;
-                transition: ease-in-out 300ms;
-    
-                &:hover {
-                    background-color: $primary-color;
-                    color: #fff;
+            .btn {
+
+                display: flex;
+                flex-direction: column;
+                
+                button {
+                    width: 25vw;
+                    height: 5vh;
+                    cursor: pointer;
+                    background-color: #fff;
+                    border: solid 1px $primary-color;
+                    transition: ease-in-out 300ms;
+        
+                    &:hover {
+                        background-color: $primary-color;
+                        color: #fff;
+                    }
                 }
             }
         }
@@ -236,8 +248,7 @@ body {
                 height: auto;
                 padding: 0 2em;
                 margin-top: 22px;
-
-                
+  
             }
 
             .form1 {
