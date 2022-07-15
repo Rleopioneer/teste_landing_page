@@ -46,8 +46,10 @@
     
                 
                 .navButtons {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     margin: 0px 30px;
-                    padding: 2.5vh 1vw;
                     background-color: #fff;
                     text-align: center;
                     border-radius: 5px;
@@ -97,7 +99,31 @@
     
                     .navButtons {
                         margin: 0px 0.4em;
-                        padding: 1.2em 6vw;
+                        padding: 1em 5vw;
+                        text-align: center;
+                        border-radius: 5px;
+                        width: auto;
+                    }
+    
+                }
+            }
+
+        }
+ 
+    }
+
+    @media (max-width: 325px) {
+
+        height: 30em;
+        
+        .container {
+
+            .navbar {
+
+                .navlist {
+        
+                    .navButtons {
+                        margin: 0px 0.4em;
                         text-align: center;
                         border-radius: 5px;
                         width: auto;

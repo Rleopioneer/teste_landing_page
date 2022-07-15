@@ -57,8 +57,10 @@ body .formSend {
   align-items: center;
 }
 .header .container .navbar .navlist .navButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0px 30px;
-  padding: 2.5vh 1vw;
   background-color: #fff;
   text-align: center;
   border-radius: 5px;
@@ -94,7 +96,18 @@ body .formSend {
   }
   .header .container .navbar .navlist .navButtons {
     margin: 0px 0.4em;
-    padding: 1.2em 6vw;
+    padding: 1em 5vw;
+    text-align: center;
+    border-radius: 5px;
+    width: auto;
+  }
+}
+@media (max-width: 325px) {
+  .header {
+    height: 30em;
+  }
+  .header .container .navbar .navlist .navButtons {
+    margin: 0px 0.4em;
     text-align: center;
     border-radius: 5px;
     width: auto;
@@ -240,9 +253,15 @@ body .formSend {
   justify-content: center;
   color: #888888;
 }
+.specialSelection .container #boxes .box:last-child {
+  margin-bottom: 3em;
+}
 .specialSelection .container #boxes .box .img {
   width: 15em;
   height: 12em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .specialSelection .container #boxes .box .img img {
   width: 12em;
