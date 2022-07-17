@@ -1,7 +1,7 @@
 const obj= {
     form: document.querySelector('#form'),
 
-    enviar: document.querySelector('#enviar'),
+    send: document.querySelector('#send'),
 
     boxes: document.querySelector('#boxes'),
 
@@ -53,24 +53,24 @@ function errorMsg(){
 obj.form.onsubmit = function(e) {
     e.preventDefault()
 
-    let temErro = false
+    let hasError = false
 
-    let inputNome = document.forms['form']['name']
-    if(!inputNome.value) {
-        temErro = true
-        inputNome.classList.add('error')
-        let span = inputNome.nextSibling.nextSibling
+    let inputName = document.forms['form']['name']
+    if(!inputName.value) {
+        hasError = true
+        inputName.classList.add('error')
+        let span = inputName.nextSibling.nextSibling
         span.innerText = 'Digite o nome corretamente'
     } else {
-        inputNome.classList.remove('error')
-        let span = inputNome.nextSibling.nextSibling
+        inputName.classList.remove('error')
+        let span = inputName.nextSibling.nextSibling
         span.innerText = ''
     }
 
     let inputEmail = document.forms['form']['email']
     if (!inputEmail.value) {
         
-        temErro = true
+        hasError = true
         inputEmail.classList.add('error')
         let span = inputEmail.nextSibling.nextSibling
         span.innerText = 'Digite um E-mail'
@@ -81,13 +81,14 @@ obj.form.onsubmit = function(e) {
     }
 
     let inputCpf = document.forms['form']['cpf']
-     
-    if (!inputCpf.value) {
-        temErro = true
-        inputEmail.classList.add('error')
+    let cpfValidation = /^(([0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2})|([0-9]{11}))$/
+         
+    if (!inputCpf.value || !inputCpf.value.match(cpfValidation)) {
+        hasError = true
+        inputCpf.classList.add('error')
         let span = inputCpf.nextSibling.nextSibling
         span.innerText = 'Digite um CPF Válido'
-    } else {
+    }  else {
         inputCpf.classList.remove('error')
         let span = inputCpf.nextSibling.nextSibling
         span.innerText = ''
@@ -95,7 +96,7 @@ obj.form.onsubmit = function(e) {
 
     let radio = document.forms['form']['radio']
      if (!radio.value ) {
-        temErro = true
+        hasError = true
         console.log('erro')
         radio[1].classList.add('error')
         let span = radio[1].nextSibling.nextSibling
@@ -106,20 +107,20 @@ obj.form.onsubmit = function(e) {
         span.innerText = ''
     } 
 
-    let enviar = document.forms['form']['enviar']
-    let enviarPressionado = ''
+    let send = document.forms['form']['send']
+    let sendIsPressed = ''
 
            
-    if (!temErro) {
+    if (!hasError) {
         fetch('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1').then(toJson).then(buildProductBoxes).catch(errorMsg)
         form.submit()
-        enviarPressionado = 'enviar'
+        sendIsPressed = 'sended'
 
-        if (enviarPressionado === 'enviar') {
+        if (sendIsPressed === 'sended') {
             //Garante que novas requisições sejam feitas somente no botão de nova página
 
-            enviar.classList.add('formSend')
-            let span = enviar.nextSibling.nextSibling
+            send.classList.add('formSend')
+            let span = send.nextSibling.nextSibling
             span.innerText = 'Formulário enviado com sucesso'
             
             boxes.innerHTML = ''
@@ -131,23 +132,23 @@ obj.form.onsubmit = function(e) {
 obj.formShare.onsubmit = function(e) {
     e.preventDefault()
     
-    let temErro = false
+    let hasError = false
 
-    let inputNome = document.forms['formShare']['friendName']
-    if(!inputNome.value) {
-        temErro = true
-        inputNome.classList.add('error')
-        let span = inputNome.nextSibling.nextSibling
+    let inputName = document.forms['formShare']['friendName']
+    if(!inputName.value) {
+        hasError = true
+        inputName.classList.add('error')
+        let span = inputName.nextSibling.nextSibling
         span.innerText = 'Digite o nome corretamente'
     } else {
-        inputNome.classList.remove('error')
-        let span = inputNome.nextSibling.nextSibling
+        inputName.classList.remove('error')
+        let span = inputName.nextSibling.nextSibling
         span.innerText = ''
     }
 
     let inputEmail = document.forms['formShare']['friendEmail']
     if (!inputEmail.value) {
-        temErro = true
+        hasError = true
         inputEmail.classList.add('error')
         let span = inputEmail.nextSibling.nextSibling
         span.innerText = 'E-mail inválido'
@@ -157,7 +158,7 @@ obj.formShare.onsubmit = function(e) {
         span.innerText = ''
     }
 
-    if(!temErro) {
+    if(!hasError) {
         formShare.submit()
     }
 
