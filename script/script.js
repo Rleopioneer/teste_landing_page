@@ -68,12 +68,13 @@ obj.form.onsubmit = function(e) {
     }
 
     let inputEmail = document.forms['form']['email']
-    if (!inputEmail.value) {
-        
+    let emailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+    if (!inputEmail.value || !inputEmail.value.match(emailValidation)) {
         hasError = true
         inputEmail.classList.add('error')
         let span = inputEmail.nextSibling.nextSibling
-        span.innerText = 'Digite um E-mail'
+        span.innerText = 'Digite um E-mail válido'
     } else {
         inputEmail.classList.remove('error')
         let span = inputEmail.nextSibling.nextSibling
@@ -147,11 +148,13 @@ obj.formShare.onsubmit = function(e) {
     }
 
     let inputEmail = document.forms['formShare']['friendEmail']
-    if (!inputEmail.value) {
+    let emailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+    if (!inputEmail.value || !inputEmail.value.match(emailValidation)) {
         hasError = true
         inputEmail.classList.add('error')
         let span = inputEmail.nextSibling.nextSibling
-        span.innerText = 'E-mail inválido'
+        span.innerText = 'Digite um E-mail válido'
     } else {
         inputEmail.classList.remove('error')
         let span = inputEmail.nextSibling.nextSibling
