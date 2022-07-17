@@ -58,7 +58,37 @@ const obj= {
 }
 ```
 
+Validação dos campos de E-mail e CPF do formulário com regex:
 
+```javascript
+let inputEmail = document.forms['form']['email']
+    let emailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+    if (!inputEmail.value || !inputEmail.value.match(emailValidation)) {
+        hasError = true
+        inputEmail.classList.add('error')
+        let span = inputEmail.nextSibling.nextSibling
+        span.innerText = 'Digite um E-mail válido'
+    } else {
+        inputEmail.classList.remove('error')
+        let span = inputEmail.nextSibling.nextSibling
+        span.innerText = ''
+    }
+
+    let inputCpf = document.forms['form']['cpf']
+    let cpfValidation = /^(([0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2})|([0-9]{11}))$/
+         
+    if (!inputCpf.value || !inputCpf.value.match(cpfValidation)) {
+        hasError = true
+        inputCpf.classList.add('error')
+        let span = inputCpf.nextSibling.nextSibling
+        span.innerText = 'Digite um CPF Válido'
+    }  else {
+        inputCpf.classList.remove('error')
+        let span = inputCpf.nextSibling.nextSibling
+        span.innerText = ''
+    }
+```
 
 API Request é realizada após a validação do formulário:
 
