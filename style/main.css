@@ -150,6 +150,7 @@ body .formSend {
   height: 4.5vh;
   border: solid 1px #707070;
   margin-top: 7px;
+  padding-left: 1em;
 }
 .algorithmHelp .container .form1 .selection {
   display: flex;
@@ -460,6 +461,7 @@ body .formSend {
   height: 4.5vh;
   border: solid 1px #707070;
   margin-top: 2vh;
+  padding-left: 1em;
 }
 .news .form2 button {
   width: 20vw;
